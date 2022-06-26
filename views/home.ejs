@@ -3,5 +3,7 @@
 <p> <%= startingContent %> </p>
 <%  daysContent.forEach(function(day){ %>
 <h1><%=day.title%></h1>
-<p><%=day.content%> </p><%});%>
+<p><%=day.content.substring(0,100) + " ..."%>
+<a href=<%='/posts/'+day.title.replace(/ /g, "-") %>>read more</a><%});%>
+</p>
 <%- include("partials/footer")-%>
